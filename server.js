@@ -42,7 +42,7 @@ app.post('/Signup', async (req, res) =>{
       phoneNumber,
       username,
       password: hashedPassword,
-      creatAt: new Date().toLocaleDateString('en-CA', {timeZone: 'Africa/Blanytre'}),       
+      creatAt: new Date().toLocaleDateString('en-CA', {timeZone: 'Africa/Blantyre'}),     
     })
   res.send('<h1>Registerd Successfuly</h1>')
 
