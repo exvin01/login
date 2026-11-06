@@ -35,7 +35,7 @@ app.post('/Signup', async (req, res) =>{
     return res.send('<h1>UserName Already Exist</h1><br><p><a href="/login.html">GO BACK</a></p>')
   }
   if(!password || password.length <6){
-    return res.send('<h1>The password must be Atleast 6 characters</h1><br><p><a href="/login.html">GO BACK</a></p>')
+    return res.send('<h1>The password must be Atleast 6 characters</h1><br><p><a href="/reject.html">GO BACK</a></p>')
   }
     await collection.insertOne({
       email,
@@ -44,7 +44,7 @@ app.post('/Signup', async (req, res) =>{
       password: hashedPassword,
       creatAt: new Date().toLocaleDateString('en-CA', {timeZone: 'Africa/Blantyre'}),     
     })
-  res.send('<h1>Registerd Successfuly</h1>')
+  res.send('<h1>Registerd Successfuly</h1><h2><a href="/login.html">Go to logIn</a></h2>')
 
   } catch (err) {
     console.error(err);
@@ -69,7 +69,7 @@ app.post('/login', async (req, res) =>{
     return res.sendFile(path.join(__dirname, 'reject.html'));
   }
 
-  res.send('<h1>Registerd Successfuly</h1>')
+  res.sendFile(path.join(__dirname, 'success.html'));
 
   } catch (err) {
     console.error(err);
