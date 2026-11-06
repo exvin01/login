@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "server.js", "use": "@vercel/node" },
+      { "src": "*.html", "use": "@vercel/static" },
+      { "src": "*.css", "use": "@vercel/static" },
+      { "src": "*.js", "use": "@vercel/static" },
+      { "src": "images/**", "use": "@vercel/static" }
+    ],
+    "routes": [
+      { "src": "/style.css", "dest": "/style.css" },
+      { "src": "/main.js", "dest": "/main.js" },
+      { "src": "/(.*)\\.(css|js|png|jpg|jpeg|svg|ico|webp)", "dest": "/$1.$2" },
+      { "src": "/(.*)", "dest": "/server.js" }
+    ]
+  }
