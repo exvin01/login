@@ -1,61 +1,80 @@
 :root {
-    --bg: #eee;
-    --btn: #4e7cdd;
-    --padding: 12px;
-    --color: #05050c;
-    --radius: 10px;
+  --bg: #eee;
+  --btn: #4e7cdd;
+  --padding: 12px;
+  --color: #05050c;
+  --radius: 10px;
 }
+
+* {
+  box-sizing: border-box;
+}
+
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
+
 body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background: var(--bg);
-    color: var(--color);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--color);
+  margin: 0;
+  padding: 16px;
 }
+
 .heading {
-    text-align: center;
-    padding: var(--padding);
-    color: var(--btn);
+  text-align: center;
+  padding: var(--padding);
+  color: var(--btn);
 }
 
 .content{
-    max-width: 450px;
-    margin: auto;
+  max-width: 450px;
+  margin: 0 auto;
+  width: 100%;
 }
+
 input{
-    padding: var(--padding);
-    width: 100%;
-    font-size: 1rem;
-    border-radius: var(--radius);
-    margin-bottom: 2px;
-    border: 1px solid var(--btn);
+  padding: var(--padding);
+  width: 100%;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  border: 1px solid var(--btn);
 }
-input:hover{
-    transform: translateX(20px);
+
+input:focus {
+  outline: 2px solid var(--btn);
 }
+
 button{
-    cursor: pointer;
-    width: 100%;
-    margin-left: 19px;
-    font-size: 1.2rem;
-    padding: var(--padding);
-    margin-bottom: 10px;
-    background: var(--btn);
-    color: var(--bg);
-    font-weight: 600;
-    border: none;
-    border-radius: var(--radius);
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.2rem;
+  padding: var(--padding);
+  margin-bottom: 10px;
+  background: var(--btn);
+  color: var(--bg);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
 }
+
 button:hover{
-    background: var(--color);
+  background: var(--color);
 }
+
+button:active {
+  transform: scale(0.98);
+}
+
 .content code{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.2rem;
-    text-align: center;
-    margin-bottom: 10px;
-} 
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 span{
-    color: var(--color)
+  color: var(--color)
 }
