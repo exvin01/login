@@ -30,7 +30,7 @@ app.post('/Signup', async (req, res) =>{
   const collection = database.collection('SIGNUP');
   //VALIDATING
   const hashedPassword = await bcrypt.hash(password,10);
-  const userExist = await collection.findOne({username, password});
+  const userExist = await collection.findOne({username});
   if(userExist){
     return res.send('<h1>UserName Already Exist</h1><br><p><a href="/login.html">GO BACK</a></p>')
   }
